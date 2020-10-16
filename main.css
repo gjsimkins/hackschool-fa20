@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.navbar{
+    background-color: #BF4141;
+    border-bottom: 15px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.title > h1 {
+    color: white;
+    margin-left: 16px;
+}
+.nav-buttons a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.create-page{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pokemon-form{
+    border: 3px solid black;
+    padding: 20px;
+    width: 35%;
+}
+
+.form-row{
+    margin-bottom: 16px;
+}
+
+.view-pokemon > h2{
+    border-bottom: 7px solid black;
+}
+
+.view-pokemon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
