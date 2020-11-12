@@ -33,15 +33,19 @@ router.get('/pokemon', (req, res) => {
             ]
         }
     ]
-    res.status(200).json(pokemon);
+    res.status(200).json({ pokemon });
 });
 
-router.post('/pokemon', async (req, res) => {
+router.post('/pokemon', (req, res) => {
     const { pokemon } = req.body;
     const { name, description, type1, image, moves } = pokemon;
-    if ((!name || !description || !type1 || !image || moves > 4)){
-
+    if ((!name || !description || !type1 || !image || !moves) || moves.length > 4) {
+        res.status(400).json({ error: 'Invalid input' });
+    } 
+    else {
+        const punchMoves = moves.filter((move) => move.name.includes('Punch'));
+        res.status(200).json({ punchMoves });
     }
-    //TODO
 });
+
 module.exports = router;

@@ -10,7 +10,6 @@ server.use(express.urlencoded({extended: true }));
 
 server.use('/api', defaultRouter);
 
-
-server.listen(5000, () => {
-    console.log('Server started on port 5000');
+server.listen(config.PORT, () => {
+    console.log('Server started on port ' + config.PORT);
 });
