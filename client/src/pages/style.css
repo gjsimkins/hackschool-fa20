@@ -18,3 +18,7 @@
 label{
     margin: 5px;
 }
+
+.drawing {
+    border: 1px solid black;
+}
