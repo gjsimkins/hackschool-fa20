@@ -2,9 +2,9 @@ const express = require('express');
 const config = require('./config');
 const cors = require('cors');
 const defaultRouter = require('./api');
+const server = express();
 const mongoose = require('mongoose');
 
-const server = express();
 
 server.use(cors());
 server.use(express.json());
